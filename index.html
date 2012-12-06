@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Baroari Collective : Coming Soon</title>
+	<meta name="description" content="">
+	<meta name="author" content="Sayantan Chaudhuri">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body onclick='
+    // This is required because; http://stackoverflow.com/questions/9565363/video-element-disappears-in-chrome-when-not-using-controls
+    var video = document.getElementById("video");
+    if (video.getAttribute("controls") !== "true") {
+        video.setAttribute("controls", "true");                    
+    }
+    // Plays or pauses the video.
+    video.paused ? video.play() : video.pause();
+    // Gets rid of added controls.
+    video.removeAttribute("controls");
+'>
+
+	<header></header>
+
+	<div role="main">
+		<div id='center'>
+		    <div id='poster'>
+			<!-- <video id='video' poster="poster_small.png" preload="auto" autoplay loop > -->
+			<video id='video' poster='poster_small.png' preload='auto'>
+			    <source src="splash.webm" type="video/webm" />
+			    <source src="splash.mp4" type="video/mp4" />
+			    <img src="poster_large.png" > </img>
+			</video>
+			<!--<div id='baroari'>Baroari</div>-->
+			<!--<div id='collective'>Collective</div>-->
+		    </div>
+		</div>
+	</div>
+
+	<footer></footer>
+
+</body>
+
+</html>
